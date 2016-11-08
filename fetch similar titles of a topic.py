@@ -1,5 +1,3 @@
-
-
 # This script is to fetch top 20 similar titles of a specific topic on YouTube.
 # Results are saved in the array called "videos"
 # Please ensure that you have enabled the YouTube Data API for your project.
@@ -14,6 +12,7 @@ YOUTUBE_API_VERSION = "v3"
 
 
 topic = " League of Lengends" # this can be changed to any topic
+# title = "League of Lengends gameplay episode 1"  Can switch topic search by title search
 
 
 youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY)
@@ -22,7 +21,7 @@ youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVE
 
 
 search_response = youtube.search().list(
-   q= topic,
+   q= topic, # title
    part="id,snippet",
    maxResults=20  #can be changed to any number
   ).execute()
