@@ -1,3 +1,4 @@
+# This script is to extract external URLs that embedded in the YouTube Channel About page which doesn't provided in YouTube API 
 import urllib.request
 from bs4 import BeautifulSoup
 
