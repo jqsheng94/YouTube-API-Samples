@@ -97,6 +97,9 @@ class getAnalytics():
             fetchUrl = "https://www.googleapis.com/youtube/analytics/v1/reports?ids=" + \
                        "channel==" + self.channelID + "&start-date=" + startDate + "&end-date=" + endDate + "&metrics=" + metrics + \
                        "&dimensions=" + dimension + "&filters=video==" + videoID + ";insightTrafficSourceType==YT_SEARCH&max-results=10&sort=-views" + "&access_token=" + accesstoken
+            # YT_SEARCH can be changed to EXT_URL and RELATED_VIDEO
+            # EXT_URL tells the websites that lead the audiences to this video and the number of views are generated seperately
+            # RELATED_VIDEO lists YouTube videos that lead their audiences to this video.
         else:
             fetchUrl = "https://www.googleapis.com/youtube/analytics/v1/reports?ids=" + \
                        "channel==" + self.channelID + "&start-date=" + startDate + "&end-date=" + endDate + "&metrics=" + metrics + \
@@ -111,7 +114,7 @@ class getAnalytics():
         startDate = startDateTD.strftime('%Y-%m-%d')
         endDateTD = startDateTD + timedelta(days = self.videoNumberOfDays)
         endDate = endDateTD.strftime('%Y-%m-%d')
-        metrics = "views"
+        metrics = "views" #estimatedMinutesWatched
         dimension1 = "insightTrafficSourceType"
         dimension2 = "insightTrafficSourceDetail"
         TrafficSourceType = []
