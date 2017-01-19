@@ -40,7 +40,7 @@ def retrieveVideoInfo(youtube, video_id):
 
 
 ChanelId = 'UCaK87UTTMacD35eQITej2VA'
-DeveloperKey = "AIzaSyD8VayxShzP_7_b-00rqTgB_bMabJUUs_U"
+DeveloperKey = "XXXX"
 maxResults = '50' #maximum number of videos from the channel
 videoIDs = []
 channelUrl = "https://www.googleapis.com/youtube/v3/search?key=" + DeveloperKey + "&channelId=" + ChanelId + "&part=id&maxResults=" +maxResults
