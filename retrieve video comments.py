@@ -5,7 +5,7 @@ import simplejson as json
 
 videoId = 'RdGscv5rNXw'  #7SMtUxewLv4  RdGscv5rNXw
 DeveloperKey = "PUT YOUR KEY HERE"
-maxResults = '50' # maximum number of comments
+maxResults = '50' 
 CommentsList = []
 CommentsUrl = "https://www.googleapis.com/youtube/v3/commentThreads?key=" + DeveloperKey + "&videoId=" + videoId + "&part=snippet&maxResults=" +maxResults + "&textFormat=plainText"
 videoResults = urlopen(CommentsUrl)

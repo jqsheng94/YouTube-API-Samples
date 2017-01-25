@@ -5,7 +5,7 @@ import simplejson as json
 
 ChanelId = 'UCgRvm1yLFoaQKhmaTqXk9SA'  #UCaK87UTTMacD35eQITej2VA  #UCgRvm1yLFoaQKhmaTqXk9SA
 DeveloperKey = "PUT YOUR KEY HERE"
-maxResults = '50' #range from 0 - 50
+maxResults = '50'
 playlistInfo = []
 channelUrl = "https://www.googleapis.com/youtube/v3/playlists?key=" + DeveloperKey + "&channelId=" + ChanelId + "&part=id,snippet&maxResults=" +maxResults
 videoResults = urlopen(channelUrl)

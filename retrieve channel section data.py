@@ -6,7 +6,7 @@ import simplejson as json
 ChannelID = 'UCgHXsynhD8GxbFcNlPEn-_w'
 DeveloperKey = "PUT YOUR KEY HERE"
 part = 'contentDetails'
-maxResults = '50' # maximum number of comments
+maxResults = '50' 
 List = []
 Url = "https://www.googleapis.com/youtube/v3/channelSections?key=" + DeveloperKey + "&channelId=" + ChannelID + "&part="+ part + "&maxResults=" +maxResults + "&textFormat=plainText"
 Results = urlopen(Url)
