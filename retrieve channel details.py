@@ -1,8 +1,5 @@
 from urllib.request import urlopen
 import simplejson as json
-import pymysql
-import pymysql.cursors
-
 
 
 ChannelId = 'UCgHXsynhD8GxbFcNlPEn-_w'
