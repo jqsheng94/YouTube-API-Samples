@@ -4,7 +4,7 @@ import simplejson as json
 
 
 
-DeveloperKey = "AIzaSyD8VayxShzP_7_b-00rqTgB_bMabJUUs_U"
+DeveloperKey = "PUT YOUR KEY HERE"
 part = 'snippet'
 location = '37.42307%2C+-122.08427'
 maxResults = '50' 
