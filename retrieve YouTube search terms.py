@@ -8,8 +8,7 @@ from urllib.request import urlopen
 import simplejson as json
 import matplotlib.pyplot as plt
 from pylab import plot, show, bar
-import matplotlib.pyplot as plt
-import pandas as pd, numpy as np, matplotlib.pyplot as plt
+import pandas as pd, numpy as np
 import matplotlib.cm as cm, matplotlib.font_manager
 
 
