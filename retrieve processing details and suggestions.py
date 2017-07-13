@@ -33,33 +33,25 @@ def get_authenticated_service(args):
 def retrieveVideoInfo(youtube, video_id):
   results = youtube.videos().list(
     id=video_id,
-    part="processingDetails, suggestions"
+    part="contentDetails"
   ).execute()
   print(results)
 
 
 
-ChanelId = 'UCaK87UTTMacD35eQITej2VA'
-DeveloperKey = "XXXX"
-maxResults = '50' #maximum number of videos from the channel
-videoIDs = []
-channelUrl = "https://www.googleapis.com/youtube/v3/search?key=" + DeveloperKey + "&channelId=" + ChanelId + "&part=id&maxResults=" +maxResults
-videoResults = urlopen(channelUrl)
-videoResults = json.load(videoResults)
-for searchResult in videoResults.get("items", []):
-    if 'videoId' in searchResult['id']:
-       videoIDs.append(searchResult['id']['videoId'])
+videoIDs = 'O3UN1N-EpOQ'
+
 
 
 
 if __name__ == "__main__":
-  argparser.add_argument("--videoid", default=','.join(videoIDs))
+  argparser.add_argument("--videoid", default=videoIDs)
   args = argparser.parse_args()
   youtube = get_authenticated_service(args)
   try:
     retrieveVideoInfo(youtube, args.videoid)
   except HttpError:
-    print ("An HTTP error %d occurred:\n%s" % (HttpError.resp.status, HttpError.content))
+    print ("An HTTP error")
   else:
     print (args.videoid)
 
